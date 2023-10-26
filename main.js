@@ -4,10 +4,17 @@
 let a = +prompt("Enter");
 let sum = 0;
 
+if (a >= 0) {
     for (let i = 1; i <= a; i++) {
-        sum=sum +i;
+        sum = sum + i;
     }
     console.log(sum);
+}else if (a < 0){
+    console.log('вы ввели отрецательное число')
+}else if (typeof a === "string"){
+    console.log('Вы ввели строку')
+}
+
 
 //2) Треугольник в цикле
 // Напишите цикл, который за 7 вызовов
@@ -30,7 +37,7 @@ while (str.length<=7){
 
 
 for ( let i=1; i<=100; i++){
-    if(i&3 === 0 && i%5===0) {
+    if(i%3 === 0 && i%5===0) {
         console.log('FizzBuzz');
     }else if (i%3 === 0){
         console.log('Fizz ');
